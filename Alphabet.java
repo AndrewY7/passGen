@@ -14,6 +14,20 @@ public class Alphabet {
         if (hasSymbol) sb.append(SYMBOLS);
    }
 
+   public static int classifyCharacter(char ch) {
+        if (DIGITS.indexOf(ch) != -1) {
+            return 1; // Digit
+        } else if (UPPERCASE.indexOf(ch) != -1) {
+            return 2; // Uppercase letter
+        } else if (LOWERCASE.indexOf(ch) != -1) {
+            return 3; // Lowercase letter
+        } else if (SYMBOLS.indexOf(ch) != -1) {
+            return 4; // Symbol
+        } else {
+            return -1; 
+        }
+    }   
+
    public String getAlphabet() {
        return sb.toString();
    }
