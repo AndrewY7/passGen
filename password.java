@@ -1,6 +1,8 @@
+import java.security.SecureRandom;
+
 class Password {
-    String pass_strength;
-    int pass_length;
+    private String pass_strength;
+    private int pass_length;
 
     public Password(String s) {
         pass_strength = s;
